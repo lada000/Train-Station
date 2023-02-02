@@ -1,8 +1,11 @@
 class Route
+  include InstanceCounter 
+
   attr_accessor :station_list
 
   def initialize(first_station, last_station)
     @station_list = [first_station, last_station]
+    increment_instance_counter
   end
 
   def add_station(intermediate_station)

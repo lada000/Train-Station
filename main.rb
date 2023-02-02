@@ -1,3 +1,4 @@
+require './company_name.rb'
 require './station.rb' 
 require './train.rb' 
 require './passenger_train.rb'
@@ -6,6 +7,7 @@ require './passenger_wagon.rb'
 require './cargo_wagon.rb'
 require './route.rb' 
 require './wagon.rb'
+require './instanse_counter.rb'
 
 # '''train1 = Train.new(1, "passenger",[])
 # train2 = Train.new(2, "cargo", [])

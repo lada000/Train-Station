@@ -1,9 +1,19 @@
 class Station 
+  include InstanceCounter 
+
   attr_accessor :name
+
+  @@all_stations = []
   
+  def self.all_stations 
+    @@all_stations.each { |station| puts station.name }
+  end
+
   def initialize(name, train_list)
     @name = name
     @train_list = Set.new(train_list)
+    @@all_stations << self
+    increment_instance_counter
   end
 
   def add_train(train)
